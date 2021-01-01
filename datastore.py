@@ -84,21 +84,23 @@ def modify(key,value):
             l.append(value)
             l.append(b[1])
             d[key]=l
-
-create("maha",25,3600)
+print("Enter the data to be created:")
+#create("maha",25,3600)
+create(input(),int(input()),int(input()))
 
 #to create a key with key_name,value given and with no time-to-live property
 
 
-create("src",70,3600) 
+#create("src",70,3600) 
 #to create a key with key_name,value given and with time-to-live property value given(number of seconds)
 
-
-read("maha")
+print("enter the key that value to be read:")
+#read("maha")
+read(input())
 #it returns the value of the respective key in Jasonobject format 'key_name:value'
 
 
-read("src")
+#read("src")
 #it returns the value of the respective key in Jasonobject format if the TIME-TO-LIVE IS NOT EXPIRED else it returns an ERROR
 
 
@@ -109,12 +111,14 @@ read("src")
 #either use modify operation to change the value of a key
 #or use delete operation and recreate it
 
-
-modify("maha",55)
+#print("Enter the key to be modified:")
+#modify("maha",55)
+#modify(input(),int(input()))
 #it replaces the initial value of the respective key with new value 
 
- 
-delete("maha")
+print("Enter the key to be deleted:")
+#delete("maha")
+delete(input())
 #it deletes the respective key and its value from the database(memory is also freed)
 
 #we can access these using multiple threads like
@@ -135,4 +139,3 @@ time.sleep(2)
 print("Thread_3 executed")
 x=json.dumps(d) #json object is x
 print(x)
-

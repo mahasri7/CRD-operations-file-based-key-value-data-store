@@ -85,7 +85,7 @@ def modify(key,value):
             l.append(b[1])
             d[key]=l
 
-create(input(),int(input()),int(input())) #userinput
+create("maha",25,3600)
 
 #to create a key with key_name,value given and with no time-to-live property
 
